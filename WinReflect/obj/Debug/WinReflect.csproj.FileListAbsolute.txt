@@ -1,0 +1,64 @@
+c:\users\brad\documents\visual studio 2015\Projects\WinReflect\WinReflect\bin\Debug\WinReflect.exe.config
+c:\users\brad\documents\visual studio 2015\Projects\WinReflect\WinReflect\bin\Debug\WinReflect.exe
+c:\users\brad\documents\visual studio 2015\Projects\WinReflect\WinReflect\bin\Debug\WinReflect.pdb
+c:\users\brad\documents\visual studio 2015\Projects\WinReflect\WinReflect\obj\Debug\WinReflect.Form1.resources
+c:\users\brad\documents\visual studio 2015\Projects\WinReflect\WinReflect\obj\Debug\WinReflect.Properties.Resources.resources
+c:\users\brad\documents\visual studio 2015\Projects\WinReflect\WinReflect\obj\Debug\WinReflect.csproj.GenerateResource.Cache
+c:\users\brad\documents\visual studio 2015\Projects\WinReflect\WinReflect\obj\Debug\WinReflect.exe
+c:\users\brad\documents\visual studio 2015\Projects\WinReflect\WinReflect\obj\Debug\WinReflect.pdb
+E:\01_SoftwareandData-QSYNC\08_Programming\04_Projects-Stable\WinReflect\WinReflect\bin\Debug\WinReflect.exe.config
+E:\01_SoftwareandData-QSYNC\08_Programming\04_Projects-Stable\WinReflect\WinReflect\obj\Debug\WinReflect.exe
+E:\01_SoftwareandData-QSYNC\08_Programming\04_Projects-Stable\WinReflect\WinReflect\obj\Debug\WinReflect.pdb
+E:\01_SoftwareandData-QSYNC\08_Programming\04_Projects-Stable\WinReflect\WinReflect\obj\Debug\WinReflect.Properties.Resources.resources
+E:\01_SoftwareandData-QSYNC\08_Programming\04_Projects-Stable\WinReflect\WinReflect\obj\Debug\WinReflect.csproj.GenerateResource.Cache
+E:\01_SoftwareandData-QSYNC\08_Programming\04_Projects-Stable\WinReflect\WinReflect\bin\Debug\WinReflect.exe
+E:\01_SoftwareandData-QSYNC\08_Programming\04_Projects-Stable\WinReflect\WinReflect\bin\Debug\WinReflect.pdb
+E:\01_SoftwareandData-QSYNC\08_Programming\04_Projects-Stable\WinReflect\WinReflect\obj\Debug\WinReflect.Form1.resources
+C:\Users\BradG\Documents\Visual Studio 2015\Projects\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.exe.config
+C:\Users\BradG\Documents\Visual Studio 2015\Projects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.exe
+C:\Users\BradG\Documents\Visual Studio 2015\Projects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.pdb
+C:\Users\BradG\Documents\Visual Studio 2015\Projects\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.exe
+C:\Users\BradG\Documents\Visual Studio 2015\Projects\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.pdb
+C:\Users\BradG\Documents\Visual Studio 2015\Projects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.Form1.resources
+C:\Users\BradG\Documents\Visual Studio 2015\Projects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.Properties.Resources.resources
+C:\Users\BradG\Documents\Visual Studio 2015\Projects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.csproj.GenerateResource.Cache
+C:\Users\BradG\Documents\CodeProjects\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.exe.config
+C:\Users\BradG\Documents\CodeProjects\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.exe
+C:\Users\BradG\Documents\CodeProjects\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.pdb
+C:\Users\BradG\Documents\CodeProjects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.Form1.resources
+C:\Users\BradG\Documents\CodeProjects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.Properties.Resources.resources
+C:\Users\BradG\Documents\CodeProjects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.csproj.GenerateResource.cache
+C:\Users\BradG\Documents\CodeProjects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.csproj.CoreCompileInputs.cache
+C:\Users\BradG\Documents\CodeProjects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.exe
+C:\Users\BradG\Documents\CodeProjects\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.pdb
+C:\Users\Brad\Documents\Visual Studio 2015\Projects\WinReflect\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.exe.config
+C:\Users\Brad\Documents\Visual Studio 2015\Projects\WinReflect\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.exe
+C:\Users\Brad\Documents\Visual Studio 2015\Projects\WinReflect\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.pdb
+D:\GITRepos\reposSource\WinReflect\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.exe.config
+D:\GITRepos\reposSource\WinReflect\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.exe
+D:\GITRepos\reposSource\WinReflect\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.pdb
+D:\GITRepos\reposSource\KLVTelemetry\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.exe.config
+D:\GITRepos\reposSource\KLVTelemetry\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.exe
+D:\GITRepos\reposSource\KLVTelemetry\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.pdb
+D:\GITRepos\reposSource\KLVTelemetry\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.exe
+D:\GITRepos\reposSource\KLVTelemetry\WinReflect-Nov2018\WinReflect\bin\Debug\WinReflect.pdb
+D:\GITRepos\reposSource\KLVTelemetry\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.csprojResolveAssemblyReference.cache
+D:\GITRepos\reposSource\KLVTelemetry\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.Form1.resources
+D:\GITRepos\reposSource\KLVTelemetry\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.Properties.Resources.resources
+D:\GITRepos\reposSource\KLVTelemetry\WinReflect-Nov2018\WinReflect\obj\Debug\WinReflect.csproj.GenerateResource.Cache
+D:\GITRepos\windowssource\WinReflect-Oct2020\WinReflect\bin\Debug\WinReflect.exe.config
+D:\GITRepos\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.exe
+D:\GITRepos\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.pdb
+D:\GITRepos\windowssource\WinReflect-Oct2020\WinReflect\bin\Debug\WinReflect.exe
+D:\GITRepos\windowssource\WinReflect-Oct2020\WinReflect\bin\Debug\WinReflect.pdb
+D:\GITRepos\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.Form1.resources
+D:\GITRepos\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.Properties.Resources.resources
+D:\GITRepos\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.csproj.GenerateResource.Cache
+D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\bin\Debug\WinReflect.exe.config
+D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.exe
+D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.pdb
+D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\bin\Debug\WinReflect.exe
+D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\bin\Debug\WinReflect.pdb
+D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.Form1.resources
+D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.Properties.Resources.resources
+D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.csproj.GenerateResource.Cache
