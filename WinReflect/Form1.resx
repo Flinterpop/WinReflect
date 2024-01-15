@@ -117,6 +117,24 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label10.Text" xml:space="preserve">
+    <value>This app listens to UDP packets coming in on the 'Listen Port' . It can then re-send (reflect) these packets 
+to a new destination IP and port (Reflect IP and Reflect Port). The source IP of the reflected packets 
+must be one of the IP addresses assigned to a NIC on the local machine. The options are listed in 
+the Reflect Src IP combo box
+
+Do not run in steady state with 'Long Term Debug' on. App will eventually hang.
+
+The debug window will clear after every 100 packets are received. 
+
+ToDo:
+May not show all IPv4 addresses for NICs that have more than One IPv4 address assigned.
+-Add iterator to check for multiple IPv4 addresses on single adapter
+Main loop has two lines that update Text Boxes. This should be moved to a separate thread for performance.
+
+
+</value>
+  </data>
   <data name="label12.Text" xml:space="preserve">
     <value>18 Oct 2020:
 -added ability to save config
@@ -135,24 +153,8 @@ Refined adpater info to only show usefull IPs
 add option to skip showing wireless IPs
 Add Quiet mode that stops UI updates while listening
 31 Jan 2021:
-Added line to stop Bluetooth adapters from being added</value>
-  </data>
-  <data name="label10.Text" xml:space="preserve">
-    <value>This app listens to UDP packets coming in on the 'Listen Port' . It can then re-send (reflect) these packets 
-to a new destination IP and port (Reflect IP and Reflect Port). The source IP of the reflected packets 
-must be one of the IP addresses assigned to a NIC on the local machine. The options are listed in 
-the Reflect Src IP combo box
-
-Do not run in steady state with 'Long Term Debug' on. App will eventually hang.
-
-The debug window will clear after every 100 packets are received. 
-
-ToDo:
-May not show all IPv4 addresses for NICs that have more than One IPv4 address assigned.
--Add iterator to check for multiple IPv4 addresses on single adapter
-Main loop has two lines that update Text Boxes. This should be moved to a separate thread for performance.
-
-
-</value>
+Added line to stop Bluetooth adapters from being added
+15 Jan 2024:
+Changed Send port rrom Int16 to Int32</value>
   </data>
 </root>

@@ -51,3 +51,13 @@ C:\Users\BradX99\Documents\GitHub\windowssource\WinReflect-Oct2020\WinReflect\ob
 C:\Users\BradX99\Documents\GitHub\windowssource\WinReflect-Oct2020\WinReflect\obj\Release\WinReflect.Form1.resources
 C:\Users\BradX99\Documents\GitHub\windowssource\WinReflect-Oct2020\WinReflect\obj\Release\WinReflect.Properties.Resources.resources
 C:\Users\BradX99\Documents\GitHub\windowssource\WinReflect-Oct2020\WinReflect\obj\Release\WinReflect.csproj.GenerateResource.Cache
+C:\source\gitinternal\WinReflect\WinReflect\bin\Release\WinReflect.exe.config
+C:\source\gitinternal\WinReflect\WinReflect\bin\Release\WinReflect.exe
+C:\source\gitinternal\WinReflect\WinReflect\bin\Release\WinReflect.pdb
+C:\source\gitinternal\WinReflect\WinReflect\obj\Release\WinReflect.csproj.AssemblyReference.cache
+C:\source\gitinternal\WinReflect\WinReflect\obj\Release\WinReflect.Form1.resources
+C:\source\gitinternal\WinReflect\WinReflect\obj\Release\WinReflect.Properties.Resources.resources
+C:\source\gitinternal\WinReflect\WinReflect\obj\Release\WinReflect.csproj.GenerateResource.cache
+C:\source\gitinternal\WinReflect\WinReflect\obj\Release\WinReflect.csproj.CoreCompileInputs.cache
+C:\source\gitinternal\WinReflect\WinReflect\obj\Release\WinReflect.exe
+C:\source\gitinternal\WinReflect\WinReflect\obj\Release\WinReflect.pdb

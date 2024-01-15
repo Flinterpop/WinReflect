@@ -326,8 +326,10 @@ namespace WinReflect
                 int ttl = System.Convert.ToInt16(szTTL, 10);
 
                 String szPort = tb_SendPort.Text;
-                int sendPort = System.Convert.ToInt16(szPort, 10);
+                int sendPort = System.Convert.ToInt32(szPort, 10);
                 SendEndPoint = new System.Net.IPEndPoint(SendIPAddress, sendPort);
+                debug("send to port:" + sendPort.ToString());
+
 
                 String szSrcPort = tb_ReflectSrcPort.Text;
                 FromPort = System.Convert.ToInt16(szSrcPort, 10);
@@ -488,6 +490,7 @@ namespace WinReflect
                 tb_PacketsSent.Enabled = true;
             }
         }
+
 
     }//end  Class
 }//end namespace

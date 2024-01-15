@@ -62,3 +62,13 @@ D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\bin\Debug\WinReflect.pdb
 D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.Form1.resources
 D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.Properties.Resources.resources
 D:\GIT\windowssource\WinReflect-Oct2020\WinReflect\obj\Debug\WinReflect.csproj.GenerateResource.Cache
+C:\source\gitinternal\WinReflect\WinReflect\obj\Debug\WinReflect.csproj.AssemblyReference.cache
+C:\source\gitinternal\WinReflect\WinReflect\obj\Debug\WinReflect.Form1.resources
+C:\source\gitinternal\WinReflect\WinReflect\obj\Debug\WinReflect.Properties.Resources.resources
+C:\source\gitinternal\WinReflect\WinReflect\obj\Debug\WinReflect.csproj.GenerateResource.cache
+C:\source\gitinternal\WinReflect\WinReflect\obj\Debug\WinReflect.csproj.CoreCompileInputs.cache
+C:\source\gitinternal\WinReflect\WinReflect\obj\Debug\WinReflect.exe
+C:\source\gitinternal\WinReflect\WinReflect\obj\Debug\WinReflect.pdb
+C:\source\gitinternal\WinReflect\WinReflect\bin\Debug\WinReflect.exe.config
+C:\source\gitinternal\WinReflect\WinReflect\bin\Debug\WinReflect.exe
+C:\source\gitinternal\WinReflect\WinReflect\bin\Debug\WinReflect.pdb
