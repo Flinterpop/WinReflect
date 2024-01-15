@@ -608,6 +608,7 @@
             this.Controls.Add(this.bn_GetAdapterInfo);
             this.Controls.Add(this.bn_Quit);
             this.Controls.Add(this.tb_host);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.RightToLeftLayout = true;
             this.Text = "WinPacketReflector - 15 Jan 2024 - B. Graham";
