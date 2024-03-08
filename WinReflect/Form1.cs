@@ -39,23 +39,27 @@ namespace WinReflect
         {
             InitializeComponent();
             tb_host.Text = Dns.GetHostName();
-            if (cb_AnyPort.Checked) cb_ListenIPs.Enabled = false;
+            if (cb_AnyPort.Checked) cb_ListenSourceIPs.Enabled = false;
             GetAdapterInfo();
             DisplayAdapterInfo();
             readConfigFile();
         }
 
 
-        void bn_GetAdapterInfo_Click(object sender, EventArgs e)
+        void QueryAdapters()
         {
-            cb_SrcIPs.Items.Clear();
-            cb_SrcIPs.ResetText();
-            cb_ListenIPs.Items.Clear(); ;
-            cb_ListenIPs.ResetText();
+            cb_SendSrcIPs.Items.Clear();
+            cb_SendSrcIPs.ResetText();
+            cb_ListenSourceIPs.Items.Clear(); ;
+            cb_ListenSourceIPs.ResetText();
 
             GetAdapterInfo();
             DisplayAdapterInfo();
             tabControl1.SelectedIndex = 1;//show adapter info tab
+        }
+        void bn_GetAdapterInfo_Click(object sender, EventArgs e)
+        {
+            QueryAdapters();
         }
 
         void GetAdapterInfo()//doesn't really do that. just gets list of IPv4 Source IPs for this machine and fills the SrcIp & Listen combo boxes with that.
@@ -86,15 +90,15 @@ namespace WinReflect
                         {
                             numUsefulNICS++;
                             usefulNIC[numNIC - 1] = true;
-                            cb_SrcIPs.Items.Add(ip.Address);
-                            cb_ListenIPs.Items.Add(ip.Address);
+                            cb_SendSrcIPs.Items.Add(ip.Address);
+                            cb_ListenSourceIPs.Items.Add(ip.Address);
                             debug("adding NIC" + ip.Address.ToString());
                         }
                     }
                 }
             }
-            cb_SrcIPs.SelectedIndex = 0;
-            cb_ListenIPs.SelectedIndex = 0;
+            if (cb_SendSrcIPs.Items.Count != 0) cb_SendSrcIPs.SelectedIndex = 0;
+            if (cb_ListenSourceIPs.Items.Count !=0) cb_ListenSourceIPs.SelectedIndex = 0;
         }
 
 
@@ -191,6 +195,7 @@ namespace WinReflect
 
         void bn_Quit_Click(object sender, EventArgs e)
         {
+            saveConfig();
             Close();
         }
 
@@ -213,7 +218,7 @@ namespace WinReflect
                 tb_ListenIP.Enabled = true;
                 tb_ListenPort.Enabled = true;
                 cb_AnyPort.Enabled = true;
-                if (!cb_AnyPort.Checked) cb_ListenIPs.Enabled = true;
+                if (!cb_AnyPort.Checked) cb_ListenSourceIPs.Enabled = true;
                 return;
             }
 
@@ -222,7 +227,7 @@ namespace WinReflect
             tb_ListenIP.Enabled = false;
             tb_ListenPort.Enabled = false;
             cb_AnyPort.Enabled = false;
-            cb_ListenIPs.Enabled = false;
+            cb_ListenSourceIPs.Enabled = false;
 
             bn_listen.Text = "Stop Listening";
             debug("Starting listener...");
@@ -242,7 +247,7 @@ namespace WinReflect
             else
                 lb_MulticastInd.Text = "False";
 
-            IPAddress localSourceIPAddress = (IPAddress)cb_ListenIPs.SelectedItem;
+            IPAddress localSourceIPAddress = (IPAddress)cb_ListenSourceIPs.SelectedItem;
 
             IPEndPoint ListenEP;
             if (cb_AnyPort.Checked) ListenEP = new IPEndPoint(IPAddress.Any, listenPort);
@@ -337,7 +342,7 @@ namespace WinReflect
                 IPAddress localIPAddress;
                 try
                 {
-                    localIPAddress = (IPAddress)cb_SrcIPs.SelectedItem; //NEW
+                    localIPAddress = (IPAddress)cb_SendSrcIPs.SelectedItem; //NEW
                     var localEndpoint = new IPEndPoint(localIPAddress, FromPort);
                     sending_socket.Bind(localEndpoint);
 
@@ -372,7 +377,7 @@ namespace WinReflect
                 //CHANGING to START REFLECTING Mode so dis-enable widets
                 tb_SendIP.Enabled = false;
                 tb_SendPort.Enabled = false;
-                cb_SrcIPs.Enabled = false;
+                cb_SendSrcIPs.Enabled = false;
                 tb_ReflectSrcPort.Enabled = false;
                 tb_MC_TTL.Enabled = false;
 
@@ -382,7 +387,7 @@ namespace WinReflect
                 //CHANGING to STOP REFLECTING Mode so re-enable widets
                 tb_SendIP.Enabled = true;
                 tb_SendPort.Enabled = true;
-                cb_SrcIPs.Enabled = true;
+                cb_SendSrcIPs.Enabled = true;
                 tb_ReflectSrcPort.Enabled = true;
                 tb_MC_TTL.Enabled = true;
 
@@ -404,53 +409,152 @@ namespace WinReflect
 
 
         //SAVE CONFIG
-        private void bn_SaveConfig_Click(object sender, EventArgs e)
+        private void saveConfig()
         {
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             AppSettingsSection app = config.AppSettings;
-            app.Settings.Remove("szIPSelected");
-            app.Settings.Add("szIPSelected", tb_ListenIP.Text);
-            app.Settings.Remove("szPort");
-            app.Settings.Add("szPort", tb_ListenPort.Text);
-            app.Settings.Remove("szIPSelectedSend");
-            app.Settings.Add("szIPSelectedSend", tb_SendIP.Text);
-            app.Settings.Remove("szTTL");
-            app.Settings.Add("szTTL", tb_MC_TTL.Text);
-            app.Settings.Remove("szPortSend");
-            app.Settings.Add("szPortSend", tb_SendPort.Text);
-            app.Settings.Remove("SzSrcPort");
-            app.Settings.Add("SzSrcPort", tb_ReflectSrcPort.Text);
-            app.Settings.Remove("szListenIP");
-            app.Settings.Add("szListenIP", cb_ListenIPs.SelectedItem.ToString());
-            app.Settings.Remove("szSendIP");
-            app.Settings.Add("szSendIP", cb_SrcIPs.SelectedItem.ToString());
+            app.Settings.Remove("ListenIP");
+            app.Settings.Add("ListenIP", tb_ListenIP.Text);
+            app.Settings.Remove("ListenPort");
+            app.Settings.Add("ListenPort", tb_ListenPort.Text);
+            app.Settings.Remove("ListenSourceIP");
+            if (cb_ListenSourceIPs.Items.Count > 0)
+                app.Settings.Add("ListenSourceIP", cb_ListenSourceIPs.Items[cb_ListenSourceIPs.SelectedIndex].ToString());
+
+            app.Settings.Remove("ReflectIP");
+            app.Settings.Add("ReflectIP", tb_SendIP.Text);
+            app.Settings.Remove("ReflectPort");
+            app.Settings.Add("ReflectPort", tb_SendPort.Text);
+            app.Settings.Remove("ReflectSourceIP");
+            if (cb_ListenSourceIPs.Items.Count > 0)
+                app.Settings.Add("ReflectSourceIP", cb_SendSrcIPs.Items[cb_SendSrcIPs.SelectedIndex].ToString());
+
+            app.Settings.Remove("ReflectSrcPort");
+            app.Settings.Add("ReflectSrcPort", tb_ReflectSrcPort.Text);
+
+            app.Settings.Remove("ReflectTTL");
+            app.Settings.Add("ReflectTTL", tb_MC_TTL.Text);
+
+            app.Settings.Remove("QueryWireless");
+            app.Settings.Add("QueryWireless", cB_IncludeWireless.Checked?"true":"false");
+
+
+            app.Settings.Remove("SaveOnExit");
+            app.Settings.Add("SaveOnExit", cb_SaveOnExit.Checked ? "true" : "false");
+
+            app.Settings.Remove("QuietMode");
+            app.Settings.Add("QuietMode", cb_Quiet.Checked ? "true" : "false");
+
+            app.Settings.Remove("LongRunMode");
+            app.Settings.Add("LongRunMode", cb_LongRunDebug.Checked ? "true" : "false");
+
+
+            app.Settings.Remove("DebugOn");
+            app.Settings.Add("DebugOn", cb_Debug.Checked ? "true" : "false");
+
+
+
             config.Save(ConfigurationSaveMode.Modified);
+
+
+
+            debug("Saved Config File");
+        }
+        private void bn_SaveConfig_Click(object sender, EventArgs e)
+        {
+            saveConfig();
+
         }
 
         private void bn_ReadConfig_Click(object sender, EventArgs e)
         {
             readConfigFile();
+            
         }
 
         private void readConfigFile()
         {
             ConfigurationManager.RefreshSection("appSettings");
             //string sAttr;
-            string test = ConfigurationManager.AppSettings.Get("szIPSelected");
-            if (test == null) return;
+            string test = ConfigurationManager.AppSettings.Get("ListenIP");
+            if (test == null)
+            {
+                debug("No config file found");
+                return;
+            }
 
-            tb_ListenIP.Text = ConfigurationManager.AppSettings.Get("szIPSelected");
-            tb_ListenPort.Text = ConfigurationManager.AppSettings.Get("szPort");
-            cb_ListenIPs.SelectedItem = ConfigurationManager.AppSettings.Get("szListenIP");
-            tb_SendIP.Text = ConfigurationManager.AppSettings.Get("szIPSelectedSend");
-            tb_SendPort.Text = ConfigurationManager.AppSettings.Get("szPortSend");
-            cb_SrcIPs.SelectedItem = ConfigurationManager.AppSettings.Get("szSendIP");
-            tb_ReflectSrcPort.Text = ConfigurationManager.AppSettings.Get("szSrcPort");
-            tb_MC_TTL.Text = ConfigurationManager.AppSettings.Get("szTTL");
+            tb_ListenIP.Text = ConfigurationManager.AppSettings.Get("ListenIP");
+            debug("Listen IP is " + tb_ListenIP.Text);
+            tb_ListenPort.Text = ConfigurationManager.AppSettings.Get("ListenPort");
+            debug("Listen Port is " + tb_ListenPort.Text);
+
+            string temp = ConfigurationManager.AppSettings.Get("ListenSourceIP");
+            if (temp != null) {
+                cb_ListenSourceIPs.Items.Add(temp);
+                cb_ListenSourceIPs.SelectedIndex = cb_ListenSourceIPs.Items.Count - 1;
+                debug("Listen Source IP is " + temp);
+            }
+            else debug("No Listen Source IP saved");
+
+
+            tb_SendIP.Text = ConfigurationManager.AppSettings.Get("ReflectIP");
+            debug("Reflect IP Port is " + tb_SendIP.Text);
+            tb_SendPort.Text = ConfigurationManager.AppSettings.Get("ReflectPort");
+            debug("Reflect Port is " + tb_SendPort.Text);
+
+            temp = ConfigurationManager.AppSettings.Get("ReflectSourceIP");
+            if (temp != null)
+            {
+                cb_SendSrcIPs.Items.Add(temp);
+                cb_SendSrcIPs.SelectedIndex = cb_SendSrcIPs.Items.Count - 1;
+                debug("Reflect Source IP is " + temp);
+            }
+            else debug("No Reflect Source IP saved");
+
+            tb_ReflectSrcPort.Text = ConfigurationManager.AppSettings.Get("ReflectSrcPort");
+            debug("Reflect Port is " + tb_ReflectSrcPort.Text);
+
+
+            tb_MC_TTL.Text = ConfigurationManager.AppSettings.Get("ReflectTTL");
+            debug("Reflect TTL is " + tb_MC_TTL.Text);
+
+            temp = ConfigurationManager.AppSettings.Get("QueryWireless");
+            debug("QueryWireless is " + temp);
+            if (temp == "true") cB_IncludeWireless.Checked = true;
+            else cB_IncludeWireless.Checked = false;
+
+            temp = ConfigurationManager.AppSettings.Get("SaveOneXit");
+            debug("Save on Exit  is " + temp);
+            if (temp == "true") cb_SaveOnExit.Checked = true;
+            else cb_SaveOnExit.Checked = false;
+
+
+            temp = ConfigurationManager.AppSettings.Get("QuietMode");
+            debug("Quiet Mode  is " + temp);
+            if (temp == "true") cb_Quiet.Checked = true;
+            else cb_Quiet.Checked = false;
+
+
+
+            temp = ConfigurationManager.AppSettings.Get("LongRunMode");
+            debug("Long Run Mode  is " + temp);
+            if (temp == "true") cb_LongRunDebug.Checked = true;
+            else cb_LongRunDebug.Checked = false;
+
+            temp = ConfigurationManager.AppSettings.Get("DebugOn");
+            debug("Debug is " + temp);
+            if (temp == "true") cb_Debug.Checked = true;
+            else cb_Debug.Checked = false;
+
+
+
+            debug("Read Config");
+
         }
 
         private void cB_IncludeWireless_CheckedChanged(object sender, EventArgs e)
         {
+            QueryAdapters();
             debug("Checked Changed");
             if (cB_IncludeWireless.Checked) debug("IS Checked");
         }
@@ -462,8 +566,8 @@ namespace WinReflect
 
         private void cb_AnyPort_CheckedChanged(object sender, EventArgs e)
         {
-            if (cb_AnyPort.Checked) cb_ListenIPs.Enabled = false;
-            else cb_ListenIPs.Enabled = true;
+            if (cb_AnyPort.Checked) cb_ListenSourceIPs.Enabled = false;
+            else cb_ListenSourceIPs.Enabled = true;
         }
 
         private void bn_ShowConfig_Click(object sender, EventArgs e)

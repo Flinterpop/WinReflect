@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\source\\gitinternal\\WinReflect\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{244071B8-F879-46E6-84BE-A6CCB4AAD435}|WinReflect\\WinReflect.csproj|C:\\source\\gitinternal\\WinReflect\\winreflect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{244071B8-F879-46E6-84BE-A6CCB4AAD435}|WinReflect\\WinReflect.csproj|solutionrelative:winreflect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{244071B8-F879-46E6-84BE-A6CCB4AAD435}|WinReflect\\WinReflect.csproj|C:\\source\\gitinternal\\WinReflect\\winreflect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{244071B8-F879-46E6-84BE-A6CCB4AAD435}|WinReflect\\WinReflect.csproj|solutionrelative:winreflect\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\source\\gitinternal\\WinReflect\\WinReflect\\Form1.cs",
+              "RelativeDocumentMoniker": "WinReflect\\Form1.cs",
+              "ToolTip": "C:\\source\\gitinternal\\WinReflect\\WinReflect\\Form1.cs [Design]",
+              "RelativeToolTip": "WinReflect\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-15T15:59:15.937Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\source\\gitinternal\\WinReflect\\WinReflect\\Form1.cs",
+              "RelativeDocumentMoniker": "WinReflect\\Form1.cs",
+              "ToolTip": "C:\\source\\gitinternal\\WinReflect\\WinReflect\\Form1.cs",
+              "RelativeToolTip": "WinReflect\\Form1.cs",
+              "ViewState": "AQIAAAQCAAAAAAAAAAAiwCACAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-15T15:59:25.993Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

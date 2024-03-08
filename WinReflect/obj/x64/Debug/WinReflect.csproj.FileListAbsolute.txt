@@ -1,0 +1,10 @@
+C:\source\gitinternal\WinReflect\WinReflect\bin\x64\Debug\WinReflect.exe.config
+C:\source\gitinternal\WinReflect\WinReflect\bin\x64\Debug\WinReflect.exe
+C:\source\gitinternal\WinReflect\WinReflect\bin\x64\Debug\WinReflect.pdb
+C:\source\gitinternal\WinReflect\WinReflect\obj\x64\Debug\WinReflect.csproj.AssemblyReference.cache
+C:\source\gitinternal\WinReflect\WinReflect\obj\x64\Debug\WinReflect.Form1.resources
+C:\source\gitinternal\WinReflect\WinReflect\obj\x64\Debug\WinReflect.Properties.Resources.resources
+C:\source\gitinternal\WinReflect\WinReflect\obj\x64\Debug\WinReflect.csproj.GenerateResource.cache
+C:\source\gitinternal\WinReflect\WinReflect\obj\x64\Debug\WinReflect.csproj.CoreCompileInputs.cache
+C:\source\gitinternal\WinReflect\WinReflect\obj\x64\Debug\WinReflect.exe
+C:\source\gitinternal\WinReflect\WinReflect\obj\x64\Debug\WinReflect.pdb

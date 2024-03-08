@@ -38,30 +38,16 @@
             this.tb_ListenPort = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tb_SendPort = new System.Windows.Forms.TextBox();
-            this.tb_SendIP = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.tb_PacketsRead = new System.Windows.Forms.TextBox();
-            this.tb_PacketsSent = new System.Windows.Forms.TextBox();
             this.bn_GetAdapterInfo = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.bn_ReflectMC = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cb_SrcIPs = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lb_MulticastInd = new System.Windows.Forms.Label();
             this.cb_AnyPort = new System.Windows.Forms.CheckBox();
-            this.cb_ListenIPs = new System.Windows.Forms.ComboBox();
+            this.cb_ListenSourceIPs = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tb_MC_TTL = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.tb_ReflectSrcPort = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.cb_LongRunDebug = new System.Windows.Forms.CheckBox();
@@ -79,13 +65,29 @@
             this.bn_Clear = new System.Windows.Forms.Button();
             this.bn_ShowConfig = new System.Windows.Forms.Button();
             this.cb_Quiet = new System.Windows.Forms.CheckBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tb_MC_TTL = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tb_ReflectSrcPort = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cb_SendSrcIPs = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.bn_ReflectMC = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tb_PacketsSent = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tb_SendIP = new System.Windows.Forms.TextBox();
+            this.tb_SendPort = new System.Windows.Forms.TextBox();
+            this.cb_SaveOnExit = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // rtb_Debug
@@ -132,7 +134,7 @@
             this.tb_ListenIP.Name = "tb_ListenIP";
             this.tb_ListenIP.Size = new System.Drawing.Size(186, 26);
             this.tb_ListenIP.TabIndex = 7;
-            this.tb_ListenIP.Text = "239.255.0.1";
+            this.tb_ListenIP.Text = "239.255.10.13";
             this.tb_ListenIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tb_ListenPort
@@ -141,7 +143,7 @@
             this.tb_ListenPort.Name = "tb_ListenPort";
             this.tb_ListenPort.Size = new System.Drawing.Size(186, 26);
             this.tb_ListenPort.TabIndex = 8;
-            this.tb_ListenPort.Text = "1841";
+            this.tb_ListenPort.Text = "2000";
             this.tb_ListenPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
@@ -162,42 +164,6 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Listen on Port";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(207, 68);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 20);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Reflect Port";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(207, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 20);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Reflect IP";
-            // 
-            // tb_SendPort
-            // 
-            this.tb_SendPort.Location = new System.Drawing.Point(12, 63);
-            this.tb_SendPort.Name = "tb_SendPort";
-            this.tb_SendPort.Size = new System.Drawing.Size(186, 26);
-            this.tb_SendPort.TabIndex = 14;
-            this.tb_SendPort.Text = "5006";
-            this.tb_SendPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tb_SendIP
-            // 
-            this.tb_SendIP.Location = new System.Drawing.Point(12, 22);
-            this.tb_SendIP.Name = "tb_SendIP";
-            this.tb_SendIP.Size = new System.Drawing.Size(186, 26);
-            this.tb_SendIP.TabIndex = 13;
-            this.tb_SendIP.Text = "239.255.3.5";
-            this.tb_SendIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -207,28 +173,12 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Packets Read";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(174, 311);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 20);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Packets Reflected";
-            // 
             // tb_PacketsRead
             // 
             this.tb_PacketsRead.Location = new System.Drawing.Point(214, 306);
             this.tb_PacketsRead.Name = "tb_PacketsRead";
             this.tb_PacketsRead.Size = new System.Drawing.Size(140, 26);
             this.tb_PacketsRead.TabIndex = 18;
-            // 
-            // tb_PacketsSent
-            // 
-            this.tb_PacketsSent.Location = new System.Drawing.Point(26, 306);
-            this.tb_PacketsSent.Name = "tb_PacketsSent";
-            this.tb_PacketsSent.Size = new System.Drawing.Size(140, 26);
-            this.tb_PacketsSent.TabIndex = 19;
             // 
             // bn_GetAdapterInfo
             // 
@@ -249,39 +199,12 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Host Name";
             // 
-            // bn_ReflectMC
-            // 
-            this.bn_ReflectMC.Location = new System.Drawing.Point(26, 251);
-            this.bn_ReflectMC.Name = "bn_ReflectMC";
-            this.bn_ReflectMC.Size = new System.Drawing.Size(142, 40);
-            this.bn_ReflectMC.TabIndex = 22;
-            this.bn_ReflectMC.Text = "Start Reflecting";
-            this.bn_ReflectMC.UseVisualStyleBackColor = true;
-            this.bn_ReflectMC.Click += new System.EventHandler(this.bn_ReflectMC_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(207, 105);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 20);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Reflect Src IP";
-            // 
-            // cb_SrcIPs
-            // 
-            this.cb_SrcIPs.FormattingEnabled = true;
-            this.cb_SrcIPs.Location = new System.Drawing.Point(12, 100);
-            this.cb_SrcIPs.Name = "cb_SrcIPs";
-            this.cb_SrcIPs.Size = new System.Drawing.Size(186, 28);
-            this.cb_SrcIPs.TabIndex = 25;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Info;
             this.groupBox1.Controls.Add(this.lb_MulticastInd);
             this.groupBox1.Controls.Add(this.cb_AnyPort);
-            this.groupBox1.Controls.Add(this.cb_ListenIPs);
+            this.groupBox1.Controls.Add(this.cb_ListenSourceIPs);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label3);
@@ -322,13 +245,13 @@
             this.cb_AnyPort.UseVisualStyleBackColor = true;
             this.cb_AnyPort.CheckedChanged += new System.EventHandler(this.cb_AnyPort_CheckedChanged);
             // 
-            // cb_ListenIPs
+            // cb_ListenSourceIPs
             // 
-            this.cb_ListenIPs.FormattingEnabled = true;
-            this.cb_ListenIPs.Location = new System.Drawing.Point(194, 105);
-            this.cb_ListenIPs.Name = "cb_ListenIPs";
-            this.cb_ListenIPs.Size = new System.Drawing.Size(186, 28);
-            this.cb_ListenIPs.TabIndex = 31;
+            this.cb_ListenSourceIPs.FormattingEnabled = true;
+            this.cb_ListenSourceIPs.Location = new System.Drawing.Point(194, 105);
+            this.cb_ListenSourceIPs.Name = "cb_ListenSourceIPs";
+            this.cb_ListenSourceIPs.Size = new System.Drawing.Size(186, 28);
+            this.cb_ListenSourceIPs.TabIndex = 31;
             // 
             // label15
             // 
@@ -347,65 +270,6 @@
             this.label11.Size = new System.Drawing.Size(171, 20);
             this.label11.TabIndex = 19;
             this.label11.Text = "Listening on Multicast?";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.Info;
-            this.groupBox2.Controls.Add(this.tb_MC_TTL);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.tb_ReflectSrcPort);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.cb_SrcIPs);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.bn_ReflectMC);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.tb_PacketsSent);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.tb_SendIP);
-            this.groupBox2.Controls.Add(this.tb_SendPort);
-            this.groupBox2.Location = new System.Drawing.Point(446, 94);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(376, 354);
-            this.groupBox2.TabIndex = 27;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Reflect";
-            // 
-            // tb_MC_TTL
-            // 
-            this.tb_MC_TTL.Location = new System.Drawing.Point(80, 178);
-            this.tb_MC_TTL.Name = "tb_MC_TTL";
-            this.tb_MC_TTL.Size = new System.Drawing.Size(118, 26);
-            this.tb_MC_TTL.TabIndex = 29;
-            this.tb_MC_TTL.Text = "128";
-            this.tb_MC_TTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(206, 183);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 20);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "TTL";
-            // 
-            // tb_ReflectSrcPort
-            // 
-            this.tb_ReflectSrcPort.Location = new System.Drawing.Point(80, 142);
-            this.tb_ReflectSrcPort.Name = "tb_ReflectSrcPort";
-            this.tb_ReflectSrcPort.Size = new System.Drawing.Size(118, 26);
-            this.tb_ReflectSrcPort.TabIndex = 27;
-            this.tb_ReflectSrcPort.Text = "5006";
-            this.tb_ReflectSrcPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(206, 149);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(121, 20);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Reflect Src Port";
             // 
             // tabControl1
             // 
@@ -506,6 +370,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.richTextBox1);
             this.tabPage4.Controls.Add(this.label12);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
@@ -518,15 +383,14 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(45, 13);
+            this.label12.Location = new System.Drawing.Point(436, 16);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(405, 400);
+            this.label12.Size = new System.Drawing.Size(0, 20);
             this.label12.TabIndex = 0;
-            this.label12.Text = resources.GetString("label12.Text");
             // 
             // bn_SaveConfig
             // 
-            this.bn_SaveConfig.Location = new System.Drawing.Point(584, 472);
+            this.bn_SaveConfig.Location = new System.Drawing.Point(584, 460);
             this.bn_SaveConfig.Name = "bn_SaveConfig";
             this.bn_SaveConfig.Size = new System.Drawing.Size(118, 35);
             this.bn_SaveConfig.TabIndex = 29;
@@ -536,7 +400,7 @@
             // 
             // bn_ReadConfig
             // 
-            this.bn_ReadConfig.Location = new System.Drawing.Point(458, 472);
+            this.bn_ReadConfig.Location = new System.Drawing.Point(458, 460);
             this.bn_ReadConfig.Name = "bn_ReadConfig";
             this.bn_ReadConfig.Size = new System.Drawing.Size(118, 35);
             this.bn_ReadConfig.TabIndex = 30;
@@ -558,7 +422,7 @@
             // 
             // bn_Clear
             // 
-            this.bn_Clear.Location = new System.Drawing.Point(28, 472);
+            this.bn_Clear.Location = new System.Drawing.Point(28, 456);
             this.bn_Clear.Name = "bn_Clear";
             this.bn_Clear.Size = new System.Drawing.Size(109, 35);
             this.bn_Clear.TabIndex = 32;
@@ -568,7 +432,7 @@
             // 
             // bn_ShowConfig
             // 
-            this.bn_ShowConfig.Location = new System.Drawing.Point(710, 472);
+            this.bn_ShowConfig.Location = new System.Drawing.Point(710, 460);
             this.bn_ShowConfig.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bn_ShowConfig.Name = "bn_ShowConfig";
             this.bn_ShowConfig.Size = new System.Drawing.Size(112, 35);
@@ -580,7 +444,7 @@
             // cb_Quiet
             // 
             this.cb_Quiet.AutoSize = true;
-            this.cb_Quiet.Location = new System.Drawing.Point(167, 478);
+            this.cb_Quiet.Location = new System.Drawing.Point(167, 462);
             this.cb_Quiet.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cb_Quiet.Name = "cb_Quiet";
             this.cb_Quiet.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -590,11 +454,173 @@
             this.cb_Quiet.UseVisualStyleBackColor = true;
             this.cb_Quiet.CheckedChanged += new System.EventHandler(this.cb_Quiet_CheckedChanged);
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Font = new System.Drawing.Font("Courier New", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(9, 16);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(771, 322);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Moccasin;
+            this.groupBox2.Controls.Add(this.tb_MC_TTL);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.tb_ReflectSrcPort);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.cb_SendSrcIPs);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.bn_ReflectMC);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.tb_PacketsSent);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.tb_SendIP);
+            this.groupBox2.Controls.Add(this.tb_SendPort);
+            this.groupBox2.Location = new System.Drawing.Point(446, 94);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(376, 354);
+            this.groupBox2.TabIndex = 27;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Reflect";
+            // 
+            // tb_MC_TTL
+            // 
+            this.tb_MC_TTL.Location = new System.Drawing.Point(80, 178);
+            this.tb_MC_TTL.Name = "tb_MC_TTL";
+            this.tb_MC_TTL.Size = new System.Drawing.Size(118, 26);
+            this.tb_MC_TTL.TabIndex = 29;
+            this.tb_MC_TTL.Text = "128";
+            this.tb_MC_TTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(206, 183);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 20);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "TTL";
+            // 
+            // tb_ReflectSrcPort
+            // 
+            this.tb_ReflectSrcPort.Location = new System.Drawing.Point(80, 142);
+            this.tb_ReflectSrcPort.Name = "tb_ReflectSrcPort";
+            this.tb_ReflectSrcPort.Size = new System.Drawing.Size(118, 26);
+            this.tb_ReflectSrcPort.TabIndex = 27;
+            this.tb_ReflectSrcPort.Text = "5005";
+            this.tb_ReflectSrcPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(206, 149);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(121, 20);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Reflect Src Port";
+            // 
+            // cb_SendSrcIPs
+            // 
+            this.cb_SendSrcIPs.FormattingEnabled = true;
+            this.cb_SendSrcIPs.Location = new System.Drawing.Point(12, 100);
+            this.cb_SendSrcIPs.Name = "cb_SendSrcIPs";
+            this.cb_SendSrcIPs.Size = new System.Drawing.Size(186, 28);
+            this.cb_SendSrcIPs.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(207, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Reflect IP";
+            // 
+            // bn_ReflectMC
+            // 
+            this.bn_ReflectMC.Location = new System.Drawing.Point(26, 251);
+            this.bn_ReflectMC.Name = "bn_ReflectMC";
+            this.bn_ReflectMC.Size = new System.Drawing.Size(142, 40);
+            this.bn_ReflectMC.TabIndex = 22;
+            this.bn_ReflectMC.Text = "Start Reflecting";
+            this.bn_ReflectMC.UseVisualStyleBackColor = true;
+            this.bn_ReflectMC.Click += new System.EventHandler(this.bn_ReflectMC_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(207, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Reflect Port";
+            // 
+            // tb_PacketsSent
+            // 
+            this.tb_PacketsSent.Location = new System.Drawing.Point(26, 306);
+            this.tb_PacketsSent.Name = "tb_PacketsSent";
+            this.tb_PacketsSent.Size = new System.Drawing.Size(140, 26);
+            this.tb_PacketsSent.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(174, 311);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(139, 20);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Packets Reflected";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(207, 105);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 20);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Reflect Src IP";
+            // 
+            // tb_SendIP
+            // 
+            this.tb_SendIP.Location = new System.Drawing.Point(12, 22);
+            this.tb_SendIP.Name = "tb_SendIP";
+            this.tb_SendIP.Size = new System.Drawing.Size(186, 26);
+            this.tb_SendIP.TabIndex = 13;
+            this.tb_SendIP.Text = "239.255.10.3";
+            this.tb_SendIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tb_SendPort
+            // 
+            this.tb_SendPort.Location = new System.Drawing.Point(12, 63);
+            this.tb_SendPort.Name = "tb_SendPort";
+            this.tb_SendPort.Size = new System.Drawing.Size(186, 26);
+            this.tb_SendPort.TabIndex = 14;
+            this.tb_SendPort.Text = "2000";
+            this.tb_SendPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cb_SaveOnExit
+            // 
+            this.cb_SaveOnExit.AutoSize = true;
+            this.cb_SaveOnExit.Checked = true;
+            this.cb_SaveOnExit.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cb_SaveOnExit.Location = new System.Drawing.Point(456, 503);
+            this.cb_SaveOnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cb_SaveOnExit.Name = "cb_SaveOnExit";
+            this.cb_SaveOnExit.Size = new System.Drawing.Size(182, 24);
+            this.cb_SaveOnExit.TabIndex = 36;
+            this.cb_SaveOnExit.Text = "Save Config on Exit?";
+            this.cb_SaveOnExit.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 905);
+            this.Controls.Add(this.cb_SaveOnExit);
             this.Controls.Add(this.cb_Quiet);
             this.Controls.Add(this.bn_ShowConfig);
             this.Controls.Add(this.bn_Clear);
@@ -611,11 +637,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.RightToLeftLayout = true;
-            this.Text = "WinPacketReflector - 15 Jan 2024 - B. Graham";
+            this.Text = "WinPacketReflector - 7 Mar 2024 - B. Graham";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -624,6 +648,8 @@
             this.tabPage3.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -650,7 +676,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button bn_ReflectMC;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cb_SrcIPs;
+        private System.Windows.Forms.ComboBox cb_SendSrcIPs;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TabControl tabControl1;
@@ -671,7 +697,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button bn_SaveConfig;
         private System.Windows.Forms.Button bn_ReadConfig;
-        private System.Windows.Forms.ComboBox cb_ListenIPs;
+        private System.Windows.Forms.ComboBox cb_ListenSourceIPs;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.CheckBox cB_IncludeWireless;
         private System.Windows.Forms.Button bn_Clear;
@@ -679,6 +705,8 @@
         private System.Windows.Forms.Button bn_ShowConfig;
         private System.Windows.Forms.Label lb_MulticastInd;
         private System.Windows.Forms.CheckBox cb_Quiet;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.CheckBox cb_SaveOnExit;
     }
 }
 

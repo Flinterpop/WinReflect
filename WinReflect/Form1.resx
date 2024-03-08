@@ -135,7 +135,7 @@ Main loop has two lines that update Text Boxes. This should be moved to a separa
 
 </value>
   </data>
-  <data name="label12.Text" xml:space="preserve">
+  <data name="richTextBox1.Text" xml:space="preserve">
     <value>18 Oct 2020:
 -added ability to save config
 -will read last config upon start - if file exists
@@ -155,7 +155,11 @@ Add Quiet mode that stops UI updates while listening
 31 Jan 2021:
 Added line to stop Bluetooth adapters from being added
 15 Jan 2024:
-Changed Send port rrom Int16 to Int32</value>
+Changed Send port rrom Int16 to Int32
+7 Mar 2024:
+Added ability of Save/Load Config to include selected item ins Src IP widgets
+
+</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
