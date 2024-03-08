@@ -1,5 +1,5 @@
-C:\source\gitinternal\WinReflect\WinReflect\bin\x64\Release\WinReflect.exe
 C:\source\gitinternal\WinReflect\WinReflect\bin\x64\Release\WinReflect.exe.config
+C:\source\gitinternal\WinReflect\WinReflect\bin\x64\Release\WinReflect.exe
 C:\source\gitinternal\WinReflect\WinReflect\bin\x64\Release\WinReflect.pdb
 C:\source\gitinternal\WinReflect\WinReflect\obj\x64\Release\WinReflect.csproj.AssemblyReference.cache
 C:\source\gitinternal\WinReflect\WinReflect\obj\x64\Release\WinReflect.Form1.resources
